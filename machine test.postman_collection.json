@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "5f0a507b-da95-4de1-abbe-cf0624732e44",
+		"name": "machine test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"mingrouge\",\n    \"fullName\": \"arnab das\",\n    \"address\": \"25 kkm road\",\n    \"phoneNumber\": \"8335006511\",\n    \"email\": \"arnabdas18@gmail.com\",\n    \"favouriteLanguage\": \"python\",\n    \"experience\":\"2 years\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/authapis/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authapis",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"rajanishrouge\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/authapis/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authapis",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "session",
+						"value": "775a35b0c65735a809c81e09da2fa82bf9a9ccb42322dc967fef364c63ea32f5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/authAPIs/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authAPIs",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "session",
+						"value": "775a35b0c65735a809c81e09da2fa82bf9a9ccb42322dc967fef364c63ea32f5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/authapis/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authapis",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show all users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "session",
+						"value": "775a35b0c65735a809c81e09da2fa82bf9a9ccb42322dc967fef364c63ea32f5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/authapis/show-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authapis",
+						"show-all"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

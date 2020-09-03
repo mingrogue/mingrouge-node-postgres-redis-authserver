@@ -1,3 +1,5 @@
+Server sets 5 minutes as session to all logged in users. session is refershed whenever any request is made within 5 minutes. server unauthenticates user after 5 minutes of inactivity and user has to login again.
+
 Steps to run application - 
 
 1. go to stack folder. run - docker-compose up
