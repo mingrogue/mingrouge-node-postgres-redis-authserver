@@ -17,9 +17,9 @@ exports.signup = async function (req, res, next) {
 
 exports.login = async function (req, res, next) {
     try {
-        let signupData = await AuthService.login(req, res);        
-        if(signupData != false){
-            return res.status(200).json(signupData);
+        let loginData = await AuthService.login(req, res);        
+        if(loginData != false){
+            return res.status(200).json(loginData);
         }
         else{
             return res.status(400).json("invalid cred");

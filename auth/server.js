@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const Sequelize = require('sequelize');
 require('dotenv').config()
 
 const app = express();
@@ -17,7 +16,7 @@ app.use(function(req, res, next) {
 
 
 const users = require('./routes/users');
-app.use('/authAPIs/', users);
+app.use('/authapis/', users);
 
 const port = 3000; 
 app.listen(port, () => {
